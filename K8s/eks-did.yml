@@ -11,4 +11,14 @@ nodeGroups:
     desiredCapacity: 3
     ssh:
       publicKeyName: maipol
+  - name: ng-mixed
+    minSize: 3
+    maxSize: 5
+    instanceDistribution:
+      maxPrice: 0.2
+      instanceTypes: ["t2.small", "t3.small"]
+      onDemandBaseCapacity: 0
+      onDemandPercentageAboveBaseCapacity: 50
+    ssh:
+      publicKeyName: maipol
  
